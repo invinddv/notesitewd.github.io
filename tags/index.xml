@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on SkyNote Site</title>
+    <link>/tags/</link>
+    <description>Recent content in Tags on SkyNote Site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <lastBuildDate>Sun, 20 Mar 2016 12:13:19 +0800</lastBuildDate>
+    
+	<atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Bar</title>
+      <link>/tags/bar/</link>
+      <pubDate>Sun, 20 Mar 2016 12:13:19 +0800</pubDate>
+      
+      <guid>/tags/bar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Foo</title>
+      <link>/tags/foo/</link>
+      <pubDate>Sun, 20 Mar 2016 12:13:19 +0800</pubDate>
+      
+      <guid>/tags/foo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Test</title>
+      <link>/tags/test/</link>
+      <pubDate>Sat, 20 Feb 2016 15:34:05 +0800</pubDate>
+      
+      <guid>/tags/test/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
