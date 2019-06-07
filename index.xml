@@ -6,16 +6,29 @@
 		<language>en-us</language>
 		<author>Skyletter</author>
 		<rights>Copyright (c) 2019</rights>
-		<updated>2019-06-02 19:50:01 &#43;0800 CST</updated>
+		<updated>2019-06-04 00:00:00 &#43;0000 UTC</updated>
 		
 		<item>
-			<title>Plan at 2019.6</title>
-			<link>http://notes.skyletter.cn/post/plan/</link>
-			<pubDate>Sun, 02 Jun 2019 19:50:01 CST</pubDate>
+			<title>Silicon Photonics: an Introduction</title>
+			<link>http://notes.skyletter.cn/silicon/</link>
+			<pubDate>Tue, 04 Jun 2019 00:00:00 UTC</pubDate>
 			<author>Skyletter</author>
-			<guid>http://notes.skyletter.cn/post/plan/</guid>
-			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://notes.skyletter.cn/img/default-header-img.tn-500x500.jpg" medium="image" type="image/jpg" width="100" height="100" />
-			<description>&lt;p&gt;搭建本站的目的在于督促自己学习，区别于原Blog站点，本站主要以简洁明了的方式进行学习记录，一切内容围绕学习和心得，发布内容将包含：&lt;/p&gt;
+			<guid>http://notes.skyletter.cn/silicon/</guid>
+			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://notes.skyletter.cn/img/Siliconbook1.jpg" medium="image" type="image/jpg" width="100" height="100" />
+			<description>&lt;p&gt;明天更新&lt;/p&gt;
+</description>
+		</item>
+		
+		<item>
+			<title>Plan at 2019.06.02</title>
+			<link>http://notes.skyletter.cn/plan1/</link>
+			<pubDate>Sun, 02 Jun 2019 00:00:00 UTC</pubDate>
+			<author>Skyletter</author>
+			<guid>http://notes.skyletter.cn/plan1/</guid>
+			<media:content xmlns:media="http://search.yahoo.com/mrss/" url="http://notes.skyletter.cn/img/panda.jpg" medium="image" type="image/jpg" width="100" height="100" />
+			<description>&lt;p&gt;搭建本站的目的在于督促自己学习，区别于原Blog站点，本站主要以简洁明了的方式进行学习记录，一切内容围绕学习和心得。&lt;/p&gt;
+
+&lt;p&gt;发布内容将包含：&lt;/p&gt;
 
 &lt;ol&gt;
 &lt;li&gt;即时的学习进度&lt;br /&gt;&lt;/li&gt;
@@ -29,25 +42,13 @@
 - 以英文写作为练习目标
 - Markdown+图床，纯文本md文件，便于迁移&lt;/p&gt;
 
-&lt;p&gt;就短期而言，拟定的学习计划有：
-1. 毕业答辩准备&lt;br /&gt;
-2. 标日初级上
-3. Silicon Photonics入门，主要有三本参考书籍：&lt;br /&gt;
+&lt;p&gt;就短期而言，主要是Silicon Photonics入门，主要有三本参考书籍：&lt;br /&gt;
 - *&lt;strong&gt;Silicon Photonics- an Introduction&lt;/strong&gt;, Graham T. Reed*&lt;br /&gt;
 - *&lt;strong&gt;Silicon Photonics- The State of Art&lt;/strong&gt;, Graham T. Reed*&lt;br /&gt;
 - *&lt;strong&gt;Silicon Photonics Design&lt;/strong&gt;, Lukas Chrostowski*&lt;/p&gt;
 
-&lt;p&gt;项目1将会在月初完成。2是源自我个人的兴趣，3是出于老板的建议，但都不是迫切的学习需求，没有设立苛刻的进度计划，可以根据情况随时调整。&lt;/p&gt;
-
-&lt;p&gt;此外，此前的学习内容和搁置的部分也可能重新被拾起，包括但不限于：&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;本科各类专业课程，以光通信方向为主&lt;/li&gt;
-&lt;li&gt;半音阶口琴演奏&lt;/li&gt;
-&lt;li&gt;工具与编程语言使用&lt;/li&gt;
-&lt;li&gt;英语学习&lt;/li&gt;
-&lt;/ol&gt;
-</description>
+&lt;p&gt;目前的进度计划，至少在7月之前看完第一本，为七月份新的学习任务打好基础。
+此外本站还会更新其他带有专业性质的内容。&lt;/p&gt;</description>
 		</item>
 		
 	</channel>
