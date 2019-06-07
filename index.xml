@@ -40,9 +40,9 @@
 &lt;li&gt;总结、思考与个人见解&lt;br /&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;写作的规则如下：
-- &lt;strong&gt;每周至少更新一篇文章&lt;/strong&gt;
-- 以英文写作为练习目标
+&lt;p&gt;写作的规则如下：&lt;br /&gt;
+- &lt;strong&gt;每周至少更新一篇文章&lt;/strong&gt;&lt;br /&gt;
+- 以英文写作为练习目标&lt;br /&gt;
 - Markdown+图床，纯文本md文件，便于迁移&lt;/p&gt;
 
 &lt;p&gt;就短期而言，主要是Silicon Photonics入门，主要有三本参考书籍：&lt;br /&gt;
