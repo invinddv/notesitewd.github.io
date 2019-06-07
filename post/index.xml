@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on SkyNote Site</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on SkyNote Site</description>
+    <title>Posts on Sky Note Site</title>
+    <link>http://notes.skyletter.cn/post/</link>
+    <description>Recent content in Posts on Sky Note Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Sun, 02 Jun 2019 19:50:01 +0800</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://notes.skyletter.cn/post/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Plan at 2019.6</title>
-      <link>/post/plan/</link>
+      <link>http://notes.skyletter.cn/post/plan/</link>
       <pubDate>Sun, 02 Jun 2019 19:50:01 +0800</pubDate>
       
-      <guid>/post/plan/</guid>
+      <guid>http://notes.skyletter.cn/post/plan/</guid>
       <description>搭建本站的目的在于督促自己学习，区别于原Blog站点，本站主要以简洁明了的方式进行学习记录，一切内容围绕学习和心得，发布内容将包含：
  即时的学习进度
  采用的学习手段
