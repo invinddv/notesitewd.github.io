@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    S P I01
+  
+ | Sky Notebook</title>
+
+
+
+<link rel="stylesheet" href="/book.min.f4161f5e2de53a2e927f51df1611323a2a12cccb2681f23cb6fc3517852e8643.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="http://notes.skyletter.cn/">Sky Notebook</a>
+</h2>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fSPI01\2f "] {
+      color: #fd7299;
+  }
+  </style>
+
+<ul>
+<li><a href="/"><strong>Introduction</strong></a></li>
+<li><a href="/docs/SPIcover/">Book Reading: <em>Silicon Photonics an Introduction</em></a>
+
+<ul>
+<li><a href="/docs/SPI01/">SPI01 内容概览和关键问题</a></li>
+<li><a href="/docs/SPI01/">SPI02 渐变型光纤的折射率表达式</a></li>
+</ul></li>
+<li><strong>Updating&hellip;</strong></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    S P I01
+  
+</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h2 id="本书的内容概览与关键问题">本书的内容概览与关键问题</h2>
+
+<p>在完成前两章的阅读之后，我决定开始撰写本次的笔记更新，<del>毕竟离吃饭还有点时间</del>。</p>
+
+<p>首先我基本确定，这份笔记应该是没有人会看的，在光电器件领域，看似差别不大的方向使用的知识和技术可能是云泥之别，这就意味着某个方向知识的受众数量是比较稀少的（相对于cs）。但是我还是想要把获取的知识（尽管很基础）分享出来，相比使用onenote等进行记录的方式，发布知识能够带来更多的快乐和成就感。假使有同行看到了我的内容，虽然是个小概率事件，我一定会更加开心。</p>
+
+<h3 id="a-brief-introduction">A brief introduction</h3>
+
+<p>First, let me talk about the learning contents, the book we are going to deal with is called: <strong><em>Silicon Photonics: An Introduction</em></strong>, written by Graham T. Reed and Andrew P. Knights, both are professionals and expert in this field. This book is friendly for readers like me student about to graduate and continue to chase for a master degree in this field. Main titles of each chapter are listed as follow:</p>
+
+<ol>
+<li>Fundamentals</li>
+<li>The Basics of Guided Waves</li>
+<li>Characteristics of Optical Fibres for Communications</li>
+<li>Silicon-on-Insulator (SOI) Photonics</li>
+<li>Fabrication of Silicon Waveguide Devices</li>
+<li>A Selection of Photonic Devices</li>
+<li>Polarisation-dependent Losses: Issues for Consideration</li>
+<li>Prospects for Silicon Light-emitting Devices<br /></li>
+</ol>
+
+<p>So far, I&rsquo;ve finished reading the first two chapters, they are mostly basic theories about <em>wave guide</em> and has been introduced in my undergraduate course <em>Integrated Photonics</em> and <em>Electromagnetic Field and Wave</em>. For me, the front part of this book is not hard to understand, just like having a review. However, I still obtain many theoretical details that been ignored or misunderstood in my pervious study.</p>
+
+<h3 id="1-foreword">1.Foreword</h3>
+
+<p>This part is given by Dr. Mario Paniccia of Intel Corporation, titled as <strong><em>Siliconizing Photonics</em></strong>, give some valuable ideas on today&rsquo;s (10 years before in fact, but still works today) <em>Optical Communication</em> and future develop orientation. It says “*Moore’s law has resulted in significant performance gains while simultaneously bringing about significant cost reductions*” and raises several questions:</p>
+
+<blockquote>
+<ol>
+<li><p>Can we ‘siliconize’ photonics?</p></li>
+
+<li><p>Can we call on the decades of research and manufacturing experience gained from the microelectronics industry and apply it to photonics?</p></li>
+
+<li><p>Could silicon be used as an alternative to more exotic materials (such as InP or LiNbO3) typically used to produce optical devices?</p></li>
+
+<li><p>Could one monolithically integrate multiple photonic circuits on a single silicon chip to increase performance while simultaneously reducing cost?</p></li>
+
+<li><p>Could one implement standardization and high-volume manufacturing techniques to reduce cost?</p></li>
+
+<li><p>Could we combine electronics with photonics to bring new levels of integration, and possibly a derivative form of Moore’s law to photonics?</p></li>
+</ol>
+</blockquote>
+</article>
+
+      
+
+      
+    </div>
+
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#本书的内容概览与关键问题">本书的内容概览与关键问题</a>
+<ul>
+<li><a href="#a-brief-introduction">A brief introduction</a></li>
+<li><a href="#1-foreword">1.Foreword</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+  
+</body>
+
+</html>
