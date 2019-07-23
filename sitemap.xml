@@ -29,7 +29,7 @@
   </url>
   
   <url>
-    <loc>http://notes.skyletter.cn/plan1/</loc>
+    <loc>http://notes.skyletter.cn/docs/Plan/</loc>
     <lastmod>2019-06-02T00:00:00+00:00</lastmod>
   </url>
   
@@ -51,6 +51,11 @@
   
   <url>
     <loc>http://notes.skyletter.cn/docs/SPI01/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>http://notes.skyletter.cn/docs/SPI02/</loc>
     <priority>0</priority>
   </url>
   

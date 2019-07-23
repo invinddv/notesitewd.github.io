@@ -60,7 +60,7 @@ https://github.com/alex-shpak/hugo-book
 <li><a href="/docs/SPIcover/">Book Reading: <em>Silicon Photonics an Introduction</em></a>
 
 <ul>
-<li><a href="/docs/SPI01/">SPI01 内容概览和关键问题</a></li>
+<li><a href="/docs/SPI01/">SPI01 内容概览和问题思考</a></li>
 <li><a href="/docs/SPI01/">SPI02 渐变型光纤的折射率表达式</a></li>
 </ul></li>
 <li><strong>Updating&hellip;</strong></li>
@@ -104,15 +104,13 @@ https://github.com/alex-shpak/hugo-book
       
 <article class="markdown">
 
-<h2 id="本书的内容概览与关键问题">本书的内容概览与关键问题</h2>
+<h1 id="内容概览与问题思考">内容概览与问题思考</h1>
 
-<p>在完成前两章的阅读之后，我决定开始撰写本次的笔记更新，<del>毕竟离吃饭还有点时间</del>。</p>
+<p>在完成前两章的阅读之后，<del>离吃饭还有点时间</del>，我决定开始撰写本次的笔记更新。首先我基本确定，这份笔记应该是没有人会看的，在光电子领域，不同方向采用的技术可能是云泥之别，这就意味着单个方向专业知识的受众数量是稀少的。然而，把知识分享出来，相比于记录在本地，能够带来更多的满足感和成就感，对自己是一种激励和奖赏。假使真有人看到这里，就更好了。</p>
 
-<p>首先我基本确定，这份笔记应该是没有人会看的，在光电器件领域，看似差别不大的方向使用的知识和技术可能是云泥之别，这就意味着某个方向知识的受众数量是比较稀少的（相对于cs）。但是我还是想要把获取的知识（尽管很基础）分享出来，相比使用onenote等进行记录的方式，发布知识能够带来更多的快乐和成就感。假使有同行看到了我的内容，虽然是个小概率事件，我一定会更加开心。</p>
+<h2 id="a-brief-introduction">A brief introduction</h2>
 
-<h3 id="a-brief-introduction">A brief introduction</h3>
-
-<p>First, let me talk about the learning contents, the book we are going to deal with is called: <strong><em>Silicon Photonics: An Introduction</em></strong>, written by Graham T. Reed and Andrew P. Knights, both are professionals and expert in this field. This book is friendly for readers like me student about to graduate and continue to chase for a master degree in this field. Main titles of each chapter are listed as follow:</p>
+<p>First, let&rsquo;s talk about the learning contents, the book we are going to deal with is called: <em>Silicon Photonics: An Introduction</em>, written by Graham T. Reed and Andrew P. Knights, both are professionals and expert in this field. This book is friendly for readers like me student about to graduate and continue to chase for a master degree in this field. Main titles of each chapter are listed as follow:</p>
 
 <ol>
 <li>Fundamentals</li>
@@ -127,9 +125,9 @@ https://github.com/alex-shpak/hugo-book
 
 <p>So far, I&rsquo;ve finished reading the first two chapters, they are mostly basic theories about <em>wave guide</em> and has been introduced in my undergraduate course <em>Integrated Photonics</em> and <em>Electromagnetic Field and Wave</em>. For me, the front part of this book is not hard to understand, just like having a review. However, I still obtain many theoretical details that been ignored or misunderstood in my pervious study.</p>
 
-<h3 id="1-foreword">1.Foreword</h3>
+<h2 id="key-questions">Key Questions</h2>
 
-<p>This part is given by Dr. Mario Paniccia of Intel Corporation, titled as <strong><em>Siliconizing Photonics</em></strong>, give some valuable ideas on today&rsquo;s (10 years before in fact, but still works today) <em>Optical Communication</em> and future develop orientation. It says “*Moore’s law has resulted in significant performance gains while simultaneously bringing about significant cost reductions*” and raises several questions:</p>
+<p>The part titled as <em>Siliconizing Photonics</em>  is given by Dr. Mario Paniccia of Intel Corporation, who gives some valuable ideas on today&rsquo;s (10 years before in fact, but still works today) <em>Optical Communication</em> and future develop orientation. It says “<em>Moore’s law has resulted in significant performance gains while simultaneously bringing about significant cost reductions</em> ” and raises several questions:</p>
 
 <blockquote>
 <ol>
@@ -146,9 +144,53 @@ https://github.com/alex-shpak/hugo-book
 <li><p>Could we combine electronics with photonics to bring new levels of integration, and possibly a derivative form of Moore’s law to photonics?</p></li>
 </ol>
 </blockquote>
+
+<h2 id="thinking">Thinking</h2>
+
+<p>十年之后的今天，这些问题中的某些已经有了很明确的答案，七月初在北大的研讨会，我看到了Acacia展示的这张图片，很好的体现了当前光电集成的新水平：</p>
+
+<p><img src="http://cdn.skyletter.cn/blog/20190723/nNyvNWaLiRu3.png?imageslim" alt="mark" /></p>
+
+<p>周治平老师一直强调，Silicon Photonics翻译成硅基光子学是错误的，而应当是硅基光电子学，因为这里的Silicon一词意指传统的微电子产业，而Silicon Photonics绝对不仅仅是光子集成，而更要处理好光子和电子之间的关系。问题一正是大家努力的方向，这里的siliconize我觉得可以理解成在传统微电子芯片上引入光子，能解决很多目前无法逾越的瓶颈。</p>
+
+<p>对于第二个问题，周治平老师也提出了自己的理解，传统微电子芯片中是不包含电流源的，因此在光电子芯片中光源也未必需要集成在芯片内，这一点对于提高芯片集成度有很大的意义。</p>
+
+<p><img src="http://cdn.skyletter.cn/blog/20190723/cg8Hcg7h7SLN.png?imageslim" alt="mark" /></p>
+
+<p>第三个问题，Si作为一种材料能否替代InP和LiNbO3来制造光器件呢？从目前来看，还是不可以的。Si材料本身的缺陷限制了其在有源器件上的应用：</p>
+
+<ul>
+<li>硅是间接带隙半导体<br /></li>
+<li>硅晶体具有中心对称结构，无Pockels效应<br /></li>
+</ul>
+
+<p>为了解决这些问题，人们采用了一系列办法，但仍然无法脱离这些功能性材料的应用，而主要是采用III-V/硅基混合集成的方式，研究的主要是集成的方式和手段。比如硅基激光器，有Laser Box、倒装焊、芯片键合、异质生长等集成方式，各自的工艺和实现效果也大不相同。 在调制器上，可以通过等离子色散效应来实现折射率调节，此外利用铌酸锂薄膜键合在硅基上也是一种前沿的解决方法：</p>
+
+<p><img src="http://cdn.skyletter.cn/blog/20190723/0LfDL0nGvb8P.png?imageslim" alt="mark" /></p>
+
+<p>总的来说，硅材料还远远没有达到能取代III-V材料的地步，现阶段硅基有源器件更多的是往混合集成的方向前进。对于最后一个问题，其实硅基光电子学某种程度上就是微电子在摩尔定律上的延续，Nature提出了<a href="https://www.nature.com/news/the-chips-are-down-for-moore-s-law-1.19338"><em>More than Moore</em></a>的概念，未来必然产业的发展应当是从需求出发引发技术的更迭。</p>
+
+<p><img src="http://cdn.skyletter.cn/blog/20190723/iJ0d3XRU3rIq.png?imageslim" alt="mark" /></p>
+
+<p>从各种意义上来说，光子作为一种信息载体，未来必然会肩负越来越多的使命。从3G的出现到5G技术的整装待发，智能手机占领人类的生活只是这几年的事情，可预见的是，技术带来的革命远未终止，只会越来越快。在这场飞速向前的旅程中，已经迎来了光子的黎明，似要带领人类进入新的纪年。</p>
+
+<p>无论对于产业界还是对于个人，这都是机遇也是挑战，一起加油吧！</p>
+
+<p>2019.7.23 @ZY</p>
 </article>
 
       
+<div class="book-footer justify-end">
+  
+  
+  <div>
+    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/docs%5cSPI01.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" alt="Edit" /> Edit this page
+    </a>
+  </div>
+  
+</div>
+
 
       
     </div>
@@ -159,13 +201,11 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc level-3 fixed">
     <nav id="TableOfContents">
 <ul>
-<li>
-<ul>
-<li><a href="#本书的内容概览与关键问题">本书的内容概览与关键问题</a>
+<li><a href="#内容概览与问题思考">内容概览与问题思考</a>
 <ul>
 <li><a href="#a-brief-introduction">A brief introduction</a></li>
-<li><a href="#1-foreword">1.Foreword</a></li>
-</ul></li>
+<li><a href="#key-questions">Key Questions</a></li>
+<li><a href="#thinking">Thinking</a></li>
 </ul></li>
 </ul>
 </nav>

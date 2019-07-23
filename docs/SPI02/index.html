@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+
+
+
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>
+  
+    
+    S P I02
+  
+ | Sky Notebook</title>
+
+
+
+<link rel="stylesheet" href="/book.min.f4161f5e2de53a2e927f51df1611323a2a12cccb2681f23cb6fc3517852e8643.css">
+
+
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+
+
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+</head>
+
+<body>
+  <input type="checkbox" style="display: none" id="menu-control" />
+  <main class="flex container">
+
+    <aside class="book-menu fixed">
+      <nav>
+<h2 class="book-brand">
+  <a href="http://notes.skyletter.cn/">Sky Notebook</a>
+</h2>
+
+
+
+    
+  
+  
+  
+
+  <style>
+  nav ul a[href$="\2f docs\2fSPI02\2f "] {
+      color: #fd7299;
+  }
+  </style>
+
+<ul>
+<li><a href="/"><strong>Introduction</strong></a></li>
+<li><a href="/docs/SPIcover/">Book Reading: <em>Silicon Photonics an Introduction</em></a>
+
+<ul>
+<li><a href="/docs/SPI01/">SPI01 内容概览和问题思考</a></li>
+<li><a href="/docs/SPI01/">SPI02 渐变型光纤的折射率表达式</a></li>
+</ul></li>
+<li><strong>Updating&hellip;</strong></li>
+</ul>
+
+
+
+
+
+</nav>
+
+
+  
+<script>
+(function() {
+  var menu = document.querySelector('aside.book-menu nav')
+  addEventListener('beforeunload', function(event) {
+    localStorage.setItem('menu.scrollTop', menu.scrollTop)
+  });
+  menu.scrollTop = localStorage.getItem('menu.scrollTop')
+})()
+</script>
+
+
+
+    </aside>
+
+    <div class="book-page">
+      <header class="align-center justify-between book-header">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" alt="Menu" />
+  </label>
+  <strong>
+  
+    
+    S P I02
+  
+</strong>
+</header>
+
+      
+<article class="markdown">
+
+<h1 id="渐变折射率光纤">渐变折射率光纤</h1>
+
+<h2 id="problem">Problem</h2>
+
+<p>近期在阅读本书Chapter3的时候，遇到一个似曾相识的老问题，关于渐变折射率(Graded-index)光纤的纤芯折射率表达式。我第一次见到这个表达式是在本科三年级，学习光纤通信的时候，当时也觉得奇怪，为什么把这样的折射率分布称为“抛物型”，因为显然这并不是一个二次表达式（红框内部分）。</p>
+
+<p><img src="http://cdn.skyletter.cn/blog/20190723/MbaWnCQcGhSD.png?imageslim" alt="mark" /></p>
+
+<p>再次看见这个表达式，我不禁思考这玩意是怎么得到的。渐变折射率光纤只提到了渐变二字，理应只要满足折射率连续变化即可，为什么在各类教材中表达式都是这样的形式呢？</p>
+
+<h2 id="self-focusing">Self-focusing</h2>
+
+<p>查阅了不少光纤通信的教材，都没有提到这个表达式的由来，以我的思考，它应该是为了达成某种目的得到的最优解，所以才会被广泛采用。提到渐变折射率光纤，它最大的特性就是能够减弱色散，书本48页对比了多模下阶跃折射率和渐变折射率的理论最大比特率，分别是*10Mbit/s·km*和*8Gbit/s·km*，模间色散差别带来了接近一千倍的比特率之差。</p>
+
+<p>之所以渐变折射率能够减弱模间色散，其中涉及到一个非常简单的原理，光速在折射率大的材料中较慢，也就是$v=\frac{c}{n}$ ，渐变型光纤的边缘折射率较低，高阶模在远离光纤轴心的位置传播时拥有更快的光速，也就弥补了其传播距离较长带来的额外光程。既然这样，通过合理设计光纤的折射率分布，能否实现高低阶模式传播光程相同呢，这样色散也就得以消除了。</p>
+
+<p><img src="http://cdn.skyletter.cn/blog/20190724/BuvTouyrtnAI.png?imageslim" alt="mark" /></p>
+
+<p>Figure3.7展示了一个典型的渐变型光纤内部不同模式传播的光路，注意不同模式的光总是随着传播距离，周期性地会聚又发散。而我们知道，根据费马原理(Fermat&rsquo;s principle)，过空间两定点的光路总是光程最短，可知上图中每一个光路交点之间的所有光线是等光程的。换句话说，如果不同模式的光到最后依然会聚在一个点上，那么色散也就不存在了。</p>
+
+<p>我找到了式3.1a中$\alpha=2$时光纤满足自聚焦条件简短证明过程[1]，以同样的方法逆推既应该可以得到前文中的折射率分布表达式。也就是说，在书中给出的表达式下，<strong>近轴</strong>不同模式的光线围绕光纤轴心呈周期性正弦摆动（强调近轴是因为实际上还是会有色散存在）。</p>
+
+<p>以这种思路来看，式3.1a其实是满足自聚焦条件的一个渐变折射率表达式，能够实现较低的色散，满足通信传输的需求。</p>
+
+<h2 id="wave-optics-analysis">Wave Optics Analysis</h2>
+
+<p>众所周知，在分析波导光学的时候，除了直观的几何光学方法之外，常常采用更为精确的波动光学方法，也即电磁学方法。这里有几张我本科集成光学的PPT。</p>
+
+<p><img src="http://cdn.skyletter.cn/blog/20190724/ClBIs7szcLTw.png?imageslim" alt="mark" /></p>
+
+<p><img src="http://cdn.skyletter.cn/blog/20190724/udsv7caHh7xW.png?imageslim" alt="mark" /></p>
+
+<p>式3.1a中列出的折射率分布实际上是平方率分布，也就是能够通过电磁场分析得到精确解的分布形式之一。从这里，我们也可以看出，选中这样的一个表达形式绝对是深思熟虑的结果。</p>
+
+<p>至于具体的缘由，到目前为止，我还没有得出一个确切的结论。受制于我的知识储备水平和数理分析能力，我还没有很好地解决当前的疑问，但也确实收获了不少相关知识。即便光纤通信可能与我的具体方向牵扯不深，我认为追究到底是有必要的。</p>
+
+<p>此后若有新的理解，我会予以更新。</p>
+
+<h2 id="matlab-simulation">Matlab Simulation</h2>
+
+<p>书中有这样的一幅图，其实就是折射率分布的直观体现。</p>
+
+<p><img src="http://cdn.skyletter.cn/blog/20190724/8CFd011h5lTO.png?imageslim" alt="mark" /></p>
+
+<p>这里$\alpha=1$的曲线是一个折线，而且在平方率折射率分布中被称为“三角分布”。直观来看，这确实是一个三角，在表达式中却很难看出它竟是线性的。因此我绘制了对照图形，虚线为真实的线性分布，可以看出和$\alpha=1$的状态还是有所差别，从图二中可以观察得更为明显。</p>
+
+<p><img src="http://cdn.skyletter.cn/blog/20190724/GSsLwQECcG2k.jpg?imageslim" alt="mark" /></p>
+
+<p><img src="http://cdn.skyletter.cn/blog/20190724/zVDaQcltsW6f.jpg?imageslim" alt="mark" /></p>
+
+<p>使用的脚本如下：</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-Matlab" data-lang="Matlab">a=<span style="color:#ae81ff">5</span>;n1=<span style="color:#ae81ff">1.3</span>;n2=<span style="color:#ae81ff">1.1</span>;
+r=linspace(<span style="color:#f92672">-</span><span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">5</span>,<span style="color:#ae81ff">1000</span>);
+lr=n1<span style="color:#f92672">-</span>r<span style="color:#f92672">*</span>(n1<span style="color:#f92672">-</span>n2)<span style="color:#f92672">/</span>a;
+lr_=fliplr(lr);
+lrr=[lr_(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">500</span>),lr(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">501</span>:<span style="color:#ae81ff">1000</span>)];
+plot(r,lrr,<span style="color:#e6db74">&#39;--k&#39;</span>),hold on
+plot([<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>a,<span style="color:#f92672">-</span>a],[n2,n2],[a,<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>a],[n2,n2])
+
+nl=[<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">2</span>,<span style="color:#ae81ff">4</span>,<span style="color:#ae81ff">10</span>];
+<span style="color:#66d9ef">for</span> i=<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">4</span>
+d=(n1^<span style="color:#ae81ff">2</span><span style="color:#f92672">-</span>n2^<span style="color:#ae81ff">2</span>)<span style="color:#f92672">/</span>(<span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>n1^<span style="color:#ae81ff">2</span>);
+n=n1<span style="color:#f92672">*</span>sqrt(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>d<span style="color:#f92672">*</span>(r<span style="color:#f92672">./</span>a)<span style="color:#f92672">.^</span>nl(<span style="color:#ae81ff">1</span>,i));
+n_=fliplr(n);
+nn=[n_(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1</span>:<span style="color:#ae81ff">500</span>),n(<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">501</span>:<span style="color:#ae81ff">1000</span>)];
+plot(r,nn)
+<span style="color:#66d9ef">end</span>
+title(<span style="color:#e6db74">&#39;graded-index variation&#39;</span>)
+ylim([<span style="color:#ae81ff">1</span>,<span style="color:#ae81ff">1.4</span>])
+legend(<span style="color:#e6db74">&#39;linear&#39;</span>,<span style="color:#e6db74">&#39;\alpha=1&#39;</span>,<span style="color:#e6db74">&#39;\alpha=2&#39;</span>,<span style="color:#e6db74">&#39;\alpha=4&#39;</span>,<span style="color:#e6db74">&#39;\alpha=10&#39;</span>)
+
+figure
+plot(r(<span style="color:#ae81ff">501</span>:<span style="color:#ae81ff">1000</span>),lrr(<span style="color:#ae81ff">501</span>:<span style="color:#ae81ff">1000</span>),<span style="color:#e6db74">&#39;--k&#39;</span>),hold on
+plot(r(<span style="color:#ae81ff">501</span>:<span style="color:#ae81ff">1000</span>),n1<span style="color:#f92672">*</span>sqrt(<span style="color:#ae81ff">1</span><span style="color:#f92672">-</span><span style="color:#ae81ff">2</span><span style="color:#f92672">*</span>d<span style="color:#f92672">*</span>(r(<span style="color:#ae81ff">501</span>:<span style="color:#ae81ff">1000</span>)<span style="color:#f92672">./</span>a)))
+legend(<span style="color:#e6db74">&#39;linear&#39;</span>,<span style="color:#e6db74">&#39;\alpha=1&#39;</span>)
+title(<span style="color:#e6db74">&#39;linear &amp; \alpha=1&#39;</span>)</code></pre></div>
+<p>参考文献：</p>
+
+<p>[1] 张晓光. 自聚焦多模光纤模式色散的几何光学与波动光学处理方法[J]. 物理与工程, 2017, 27(1): 23-29, 43.</p>
+
+<p>2019.7.24 @ZY</p>
+</article>
+
+      
+<div class="book-footer justify-end">
+  
+  
+  <div>
+    <a href="https://github.com/alex-shpak/hugo-book/edit/master/exampleSite/content/docs%5cSPI02.md" target="_blank" rel="noopener">
+      <img src="/svg/edit.svg" alt="Edit" /> Edit this page
+    </a>
+  </div>
+  
+</div>
+
+
+      
+    </div>
+
+    
+  
+
+  <aside class="book-toc level-3 fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#渐变折射率光纤">渐变折射率光纤</a>
+<ul>
+<li><a href="#problem">Problem</a></li>
+<li><a href="#self-focusing">Self-focusing</a></li>
+<li><a href="#wave-optics-analysis">Wave Optics Analysis</a></li>
+<li><a href="#matlab-simulation">Matlab Simulation</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+  </main>
+  
+  
+  
+</body>
+
+</html>
